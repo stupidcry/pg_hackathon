@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <title>Zegva - Responsive Admin & Dashboard Template | Themesdesign</title>
+  <meta content="Responsive admin theme build on top of Bootstrap 4" name="description">
+
+  <link href="static/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+  <!--Morris Chart CSS -->
+  <link rel="stylesheet" href="static/css/morris.css">
+
+  <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="static/css/metismenu.min.css" rel="stylesheet" type="text/css">
+  <link href="static/css/icons.css" rel="stylesheet" type="text/css">
+  <link href="static/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <div class="header-bg">
+    <!-- Navigation Bar-->
+    <header id="topnav">
+
+      <!-- start content -->
+      <div class="bg-dark">
+        <div class="container-fluid">
+          <!-- <div class="row align-items-center ">
+            <div class="col-md-8">
+              <div class="page-title-box">
+                <h4 class="page-title">Dashboard</h4>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active">Welcome to Zegva Dashboard</li>
+                </ol>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="row top-content">
+            <div class="col-sm-6 col-xl-3">
+              <div class="row align-items-center p-1">
+                <div class="col-lg-6" style="position: relative; margin: auto;">
+                  <h5 class="font-16 text-white">Current Speed</h5>
+                  <h4 id="speed" class="text-info pt-1 mb-0">-</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3">
+              <div class="row align-items-center p-1">
+                <div class="col-lg-6" style="position: relative; margin: auto;">
+                  <h5 class="font-16 text-white">Today Predict</h5>
+                  <h4 class="text-warning pt-1 mb-0">-</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3">
+              <div class="row align-items-center p-1">
+                <div class="col-lg-6" style="position: relative; margin: auto;">
+                  <h5 class="font-16 text-white">Product A</h5>
+                  <h4 class="text-primary pt-1 mb-0">-</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3">
+              <div class="row align-items-center p-1">
+                <div class="col-lg-6" style="position: relative; margin: auto;">
+                  <h5 class="font-16 text-white">Product B</h5>
+                  <h4 class="text-danger pt-1 mb-0">-</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end content -->
+
+      <!-- MENU Start -->
+
+    </header>
+    <!-- End Navigation Bar-->
+
+  </div>
+  <!-- header-bg -->
+
+  <div class="wrapper">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="mt-0 header-title mb-4">Production Line</h4>
+              <img src="./shengchan.svg" style="position: absolute;" />
+              <div id="line" style="height: 200px;">
+                <span
+                  style="position: absolute; margin: 88px; font-size: 100px;padding-left: 100px;">------------------------</span>
+                <img src="./box.svg" style="position: absolute; padding-left: 1100px; height: 180px;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end row -->
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="card-body">
+              <button id="speed-btn" type="button" class="btn btn-primary waves-effect waves-light">Speed Up</button>
+              <button id="slow-btn" type="button" class="btn btn-primary waves-effect waves-light">Slow</button>
+              <button id="change-btn" type="button" class="btn btn-primary waves-effect waves-light">change</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- end container-fluid -->
+  </div>
+  <!-- end wrapper -->
+
+  <!-- End Footer -->
+
+  <!-- jQuery  -->
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.bundle.min.js"></script>
+  <script src="static/js/jquery.slimscroll.js"></script>
+  <script src="static/js/waves.min.js"></script>
+
+  <!-- Plugins js -->
+  <script src="static/js/apexcharts.min.js"></script>
+  <script src="static/js/bootstrap-datepicker.min.js"></script>
+
+  <!--Morris Chart-->
+  <script src="static/js/morris.min.js"></script>
+  <script src="static/js/raphael.min.js"></script>
+
+  <script src="static/js/dashboard.init.js"></script>
+
+  <!-- App js -->
+  <script src="static/js/app.js"></script>
+
+</body>
+<script>
+
+  $(function () {
+    updateSpeed();
+    setInterval(updateSpeed, 5000);
+    console.log("1111111");
+
+
+    console.log("22222");
+  });
+
+  var animate_speed = 2500;
+  var interval_speed = 500;
+  var current_product = "xyy"
+  console.log("hello jq")
+  //$("#xfs").animate({"padding-left":"300px"},2000);
+  var my = setInterval(t, 999999);
+  // $("#line").prepend('<img src="_xifashui.svg" style="height: 100px;padding-left: 20px;">')
+  //$("#line").prepend('<img name="xfs" src="_xifashui.svg" style="padding-bottom:10px;opacity:0.5; position:absolute;height: 100px;padding-left: 0px;">')
+
+  // $("#line").prepend('<img src="_xifashui.svg" style="height: 100px;padding-left: 20px;">')
+  // $("img").animate({"padding-left":"800px"},2500,"linear",function(){
+  //   $(this).fadeOut(1000);
+  // });
+  $("#speed-btn").click(function () {
+    clearInterval(my)
+    interval_speed -= 100;
+    my = setInterval(t, interval_speed);
+  });
+
+  $("#slow-btn").click(function () {
+    clearInterval(my)
+    interval_speed += 100;
+    my = setInterval(t, interval_speed);
+  });
+
+  $("#change-btn").click(function () {
+    if (current_product == 'xfs') current_product = 'xyy'
+    else current_product = "xfs"
+  });
+
+  function t() {
+    console.log(animate_speed)
+    $("#line").prepend('<img name="xfs" src="' + current_product + '.svg" style="margin:70px;opacity:0.5; position:absolute;height: 100px;padding-left: 20px;">')
+    $("[name='xfs']").animate({ "opacity": "1" }, 500);
+    $("[name='xfs']").animate({ "padding-left": "1000px" }, animate_speed, "linear", function () {
+      $(this).remove();
+    });
+
+  }
+
+
+
+
+  function updateSpeed() {
+    $.ajax({
+      url: "https://cry-iot-central.azureiotcentral.com/api/query?api-version=1.2-preview",
+      type: "POST",
+      data: JSON.stringify({
+        "query": "SELECT TOP 1 ProduceSpeed.speed,ProduceSpeed.count, ProduceSpeed.duration,ProduceSpeed.product FROM dtmi:modelDefinition:jlykcqvg:jrur2limo WHERE WITHIN_WINDOW(P1D) and ProduceSpeed.count<>null and ProduceSpeed.duration<>null and ProduceSpeed.product<>null order by $ts DESC"
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "SharedAccessSignature sr=ae0b565a-8db0-4872-9ff4-dc6b87262323&sig=rtKGsGaNWO3x5daeyb0oKEIm1MBCK0VDez51SKpLEaI%3D&skn=Hackthon&se=1684912851973"
+      },
+      success: function (result) {
+        console.log(result)
+        var current_speed = result.results[0]["ProduceSpeed.speed"];
+        if(current_speed<=0) current_speed = 0;
+        if(result.results[0]["ProduceSpeed.product"]==1)
+          current_product = 'xyy'
+        else 
+          current_product = "xfs"
+        $("#speed").text(current_speed + "/min")
+        if (current_speed <= 0) {
+          clearInterval(my)
+        } else {
+          clearInterval(my)
+          interval_speed = 1 / (current_speed / 60) * 1000;
+          my = setInterval(t, interval_speed);
+        }
+
+      },
+      error(result) {
+        console.log(result)
+      }
+    });
+  }
+
+
+
+
+
+
+
+
+</script>
+
+</html>
